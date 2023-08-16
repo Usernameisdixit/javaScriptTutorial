@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Calculator</title>
+  <script type="text/javascript">
+    function calculateAge() {
+      var birthDate = document.getElementById("birthdate").value;  //"1995-08-25"
+      var birthYear = new Date(birthDate).getFullYear();
+      var birthMonth = new Date(birthDate).getMonth() + 1;//8
+      var birthDay = new Date(birthDate).getDate();
+      
+      var currentDate = new Date(); //"2023-06-21"
+      var currentYear = currentDate.getFullYear();
+      var currentMonth = currentDate.getMonth() + 1;//6
+      var currentDay = currentDate.getDate();
+      
+      var years = currentYear - birthYear; //2023-1995=28
+      var months = currentMonth - birthMonth; //6-8=-2
+      var days = currentDay - birthDay;//21-25=-4
+      
+      if (months < 0 || (months === 0 && days < 0)) {
+        years--;//28-1=27
+        months += 12;//-2+12=10
+      }
+      
+      if (days < 0) {                                 //6-1=5
+        var previousMonthDate = new Date(currentYear, currentMonth - 1, 0);// it will give last day of month(for may it wiil be 31 as it is 5)
+        days += previousMonthDate.getDate();//-4+31=27
+        console.log(days)
+        months--;//10-1=9
+      }
+
+      if((birthDay===currentDay) && (birthMonth===currentMonth))
+      {
+          alert("it is your birthday")
+      }
+            //27 years 9 months 27 days
+      document.getElementById("result").innerHTML = "Your age is " + years + " years, " + months + " months, and " + days + " days.";
+    }
+  </script>
+</head>
+<body>
+  <h1>Age Calculator</h1>
+  <label for="birthdate">Enter your birthdate:</label>
+  <input type="date" id="birthdate" />
+  <button onclick="calculateAge()">Calculate</button>
+  <div id="result"></div>
+</body>
+</html>

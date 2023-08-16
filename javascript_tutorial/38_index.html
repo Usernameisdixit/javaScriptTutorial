@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object Operations</title>
+</head>
+<body>
+    
+<h1>Math Object Operations</h1>
+
+<script>
+    function area_of_circle(r)
+    {
+
+    let area=Math.PI*Math.pow(r,2)
+
+return area
+    }
+
+console.log(`area of circle with radius 5 is ${area_of_circle(5)}`)
+
+//absolute value
+let a=-123
+console.log(Math.abs(a))
+
+//random Number
+
+let ran=Math.random()//generate random number between 0 to 1
+console.log(ran)
+
+//want to make 2 digit random number then multiply by 100
+console.log(ran*100)
+
+//discard decimal and return integral part of the number
+console.log("trunc"+Math.trunc(ran*100))
+
+
+console.log(Math.sqrt(8))
+
+console.log(Math.ceil(3.2))
+console.log(Math.floor(3.2))
+console.log(Math.ceil(-3.2))
+
+console.log(Math.min(2,-1,6,0))
+
+//for radian divide by pi/180 because it takes radian not degree
+console.log(Math.sin(30*3.14/180))
+
+
+const generate_number=()=>
+{
+    let n1=Math.random();
+    let n2=n1*10
+
+   n2= Math.trunc(n2)
+
+   console.log(n2)
+
+ number=(n2%6)+1
+   console.log(number)
+
+}
+
+generate_number()
+
+</script>
+
+</body>
+</html>

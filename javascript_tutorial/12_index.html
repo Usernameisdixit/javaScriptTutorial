@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>type conversion in javascript</h1>
+
+    <script>
+let a=12;
+console.log(typeof a)
+
+let as=String(a);
+console.log(typeof as)
+console.log(a)
+
+let as1=a.toString();
+console.log(typeof as1)
+console.log(as1)
+
+
+let value="1224";
+console.log(value+5)
+console.log(Number(value)+5)
+let c=Number(value)
+console.log(typeof c)
+
+let ex="false"
+console.log(typeof ex)
+
+//https://stackoverflow.com/questions/263965/how-can-i-convert-a-string-to-boolean-in-javascript
+//Any string which isn't the empty string will evaluate to true by using them. Although they're the cleanest methods I can think of concerning to boolean conversion, I think they're not what you're looking for.
+
+//var myBool = Boolean("false");  // == true
+
+//var myBool = !!"false";  // == true
+
+let B=Boolean(ex)
+console.log(B)
+console.log(typeof B)
+
+
+    </script>
+</body>
+</html>

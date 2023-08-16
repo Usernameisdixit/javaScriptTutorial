@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body{
+
+        background-color: black;
+        padding: 0px;
+        margin: 0px;
+        color:red;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .container
+    {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+    }
+
+    .clock
+    {
+font-size: 100px;
+border: 2px solid red;
+padding: 20px;
+
+    }
+</style>
+<body>
+    <h1>This is digital clock</h1>
+<div class="container">
+
+    <span class="clock">3:15AM</span>
+</div>
+
+
+<script>
+
+getTime=()=>
+{
+   const  getTime=new Date();
+//   let h= getTime.getHours();
+// let amPm=h>12?"PM":"AM"
+
+// h=h%12
+
+// h=h==0?12:h
+//   let m= getTime.getMinutes();
+
+//   m=m>9?m:"0"+m
+//   let s= getTime.getSeconds();
+//   s=s>9?s:"0"+s
+
+//    return `${h}:${m}:${s}:${amPm}`
+
+return getTime.toLocaleTimeString();
+
+}
+setInterval(() => {
+    //console.log(getTime())
+    let clcokOb=document.querySelector(".clock")
+    clcokOb.innerHTML=getTime()
+}, 1000);
+
+</script>
+    
+</body>
+</html>

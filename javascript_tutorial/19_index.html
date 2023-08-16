@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>For in loop</h1>
+    <script>
+
+        let st1={name:'John',phone:8978,address:'lko'}
+        console.log(st1)
+        console.log(typeof st1)
+
+        for(let k in st1)
+        {
+            console.log(` ${k} => ${st1[k]}`)
+        }
+
+
+ let ar=["abc","def","ghi"]
+ console.log("values are"+ar)
+
+
+ ar.forEach(
+(x,y)=>{
+console.log(x)
+
+}
+
+ )
+
+ for(let i of ar)
+ {
+     console.log(i)
+ }
+
+ for(let j in ar)
+ {
+     //console.log(j)
+     //console.log(ar[j])
+     console.log(`${j}=>${ar[j]}`)
+ }
+
+ 
+
+ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Styling</title>
+    <style>
+.redd
+{
+background-color:red
+}
+    </style>
+</head>
+<body>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="getStyle()">Get Style</button>
+<h2 id="main"> LearnCode with Developer</h2>
+<h2 id="sub">You tube channel</h2>
+<h2 id="subsub">For programming videos subscribe</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tenetur deserunt, asperiores delectus est officiis excepturi mollitia, architecto harum voluptatibus veritatis, magnam omnis ipsa voluptates. Dignissimos hic libero dolore odio esse neque veniam ipsam temporibus quibusdam corporis, eveniet, quidem alias, laborum nulla sunt architecto corrupti. Nisi illo hic optio odio laboriosam repellendus in fuga veritatis, ipsa adipisci earum magnam rem! Totam in esse exercitationem aut placeat, unde non odio possimus quas tenetur ipsum debitis doloremque porro laudantium sit sequi officiis, saepe est eius voluptatibus facilis. Sed pariatur eaque maiores deserunt voluptatibus cumque tempore delectus? Minus, at! Aspernatur, dolores modi consequatur nam veritatis similique enim qui dignissimos doloribus ratione nihil quibusdam repudiandae numquam alias maiores eaque dolorem magni, consectetur obcaecati rerum voluptate earum. Rem doloremque esse assumenda officia minus? Impedit asperiores eos sit, temporibus a ipsa mollitia, nihil ab, quis accusantium saepe explicabo magni ea velit. Sunt quia optio nihil quidem molestias est ad, cupiditate voluptates! Veritatis sit dolores eaque numquam, hic iure quasi quod itaque placeat voluptatibus cumque quae similique possimus labore facere. Recusandae magni, aliquam ad architecto impedit natus commodi deserunt! Laudantium, praesentium cumque. Modi aspernatur quod neque cumque distinctio error provident deleniti fuga incidunt ex id repellat saepe commodi a corrupti magnam odit ut iusto fugiat, maiores iure? Adipisci ullam rerum culpa debitis error laboriosam quia, eos optio reprehenderit eveniet, qui dolorum aspernatur reiciendis libero enim vel? Consequuntur, laudantium et enim culpa id odio odit placeat, nostrum commodi, officia ipsum mollitia ducimus! Omnis unde impedit sit voluptates necessitatibus, nobis ducimus assumenda quidem? Assumenda ratione qui natus nostrum tempore expedita corporis, blanditiis ipsa repellat repudiandae quia ab sint suscipit consequatur deleniti exercitationem, culpa consequuntur voluptatum, placeat vero. Odio dolore voluptate possimus vel sunt expedita impedit architecto pariatur at beatae. Aperiam illum eius labore nesciunt, libero aliquam vel totam, officiis adipisci amet eum delectus optio esse corrupti quisquam odio reiciendis. Veniam ipsum explicabo enim animi dolorum maiores quaerat qui deleniti consequatur quibusdam, soluta facilis. Cupiditate quibusdam nostrum atque consectetur beatae ipsam quam tempore asperiores hic nulla veritatis doloribus nobis ut sunt, maiores autem iure debitis eius officia eum ex soluta. Fugiat assumenda distinctio dolores vel placeat ab optio magni iure consequatur dignissimos. Ipsum obcaecati atque omnis, provident officiis minima a, vitae repudiandae magnam rerum tenetur sit iste laudantium sed deserunt perspiciatis quibusdam quisquam cumque. Quisquam, eligendi maiores, voluptas tempora nulla veritatis pariatur fugit consequatur molestias unde tempore soluta dolores earum laborum, commodi adipisci sit. Officia eum dicta, repellendus animi voluptatibus adipisci quisquam cum error. Quia modi sit, obcaecati facilis earum commodi mollitia. Alias ea fugiat dignissimos labore sit, nulla dolores sed consectetur non. Obcaecati, facere! Autem quod itaque beatae veritatis quidem enim velit eligendi officiis provident! Voluptate cum corrupti veritatis fuga tempore, illo impedit possimus excepturi nobis accusantium, quisquam vel. Minus, in voluptatum consectetur, asperiores ipsam sapiente voluptate reiciendis vero, recusandae fugiat cumque aperiam? Voluptatum, maiores doloremque! Facilis nam architecto veniam ducimus in. Ipsam tenetur id, inventore, blanditiis consequuntur ratione laudantium necessitatibus quod labore aut libero ut a assumenda fuga.</p>
+<script>
+let mainOb=document.getElementById("main");
+
+const changeStyle=()=>
+{
+//mainOb.style.color="blue"
+mainOb.style.fontSize="50px"
+mainOb.style.fontWeight="900"
+mainOb.style.border="2px solid yellow"
+mainOb.style.padding="20px"
+ mainOb.style.backgroundColor="#e2e2e2" 
+document.body.style.background="black"
+document.body.style.color="red"
+mainOb.className=mainOb.className+"redd"
+
+}
+
+const getStyle=()=>
+{
+    console.log(mainOb.style.color)
+    let styles=window.getComputedStyle(mainOb);
+    console.log(styles.getPropertyValue("color"))
+}
+</script>
+</body>
+</html>

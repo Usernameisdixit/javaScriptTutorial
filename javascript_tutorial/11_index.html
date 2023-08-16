@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>important String operations </h1>
+
+    <script>
+
+let str1="javascript"
+let str2="javascript"
+
+console.log(str1===str2)
+console.log(str1==str2)
+
+let str3=new String("javascript")
+let str4=new String("javascript")
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality
+//Note that strings constructed using new String() are objects. If you compare one of these with a string literal, the String object will be converted to a string literal and the contents will be compared. However, if both operands are String objects, then they are compared as objects and must reference the same object for comparison to succeed:
+console.log(str1==str3)// java script only check value when == operator will be there not the data type
+
+console.log(str1)
+console.log(str3)
+console.log(str3==str4)
+console.log(str2==str4)
+
+let str6="hello how are you"
+let str5=str6.split("")
+console.log(str5)
+
+    </script>
+</body>
+</html>

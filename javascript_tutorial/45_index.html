@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Object Learning</title>
+</head>
+<body>
+    
+    <h1>Class Object learning</h1>
+<script>
+    class Student
+    {
+
+constructor(name,phone)
+{
+    this.name=name
+    this.phone=phone
+
+    console.log("Object created...")
+}
+
+
+showDetails()
+{
+    console.log("Name:",`${this.name}`)
+    console.log("Phone:",this.phone)
+    console.log("++++++++++")
+
+}
+
+    }
+
+
+//going to create object
+
+let s1=new Student("Developer","1212133")
+s1.showDetails()
+
+</script>
+</body>
+</html>

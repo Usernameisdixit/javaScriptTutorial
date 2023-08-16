@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Selectors</h1>
+
+    <h2 id="banner"> the paragraph is for testing </h2>
+     
+    <h1 class="myclass">hello world</h1>
+    <h1 class="myclass">hello world</h1>
+    <h1 class="myclass">hello world</h1>
+    <script>
+
+let ht=document.documentElement
+console.log(ht)
+
+console.log(document.body)
+console.log(document.head)
+//console.log(document.getElementById("banner").innerHTML="hello hi".style.color="red")// this syntax is wrong
+let h2=document.getElementById("banner")
+ console.log(h2)
+
+ h2.style.color="white"
+ h2.style.backgroundColor="blue"
+
+ 
+let el=document.getElementsByClassName("myclass")
+console.log(typeof el)
+
+for(let elements of el)
+{
+console.log(elements)
+elements.style.color="white"
+elements.style.backgroundColor="blue"
+}
+
+
+let test=document.getElementsByTagName("h1")
+for(let t of test)
+{
+    console.log(t)
+}
+
+//css selector
+//queryselecor and querselectorall
+
+let els=document.querySelectorAll(".myclass")
+for(let hp of els)
+{
+    console.log(hp)
+    hp.style.color="pink"
+}
+    </script>
+</body>
+</html>

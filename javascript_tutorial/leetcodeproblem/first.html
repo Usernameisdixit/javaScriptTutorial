@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const formatPhoneNumber = (phoneNumber) => {
+
+            var digitsOnly = phoneNumber.replace(/\D/g, '');
+            var formattedNumber = '';
+
+            if (digitsOnly.length == 10) {
+                formattedNumber = '(' + digitsOnly.substr(0, 3) + ')' + digitsOnly.substr(3, 3) + '-' + digitsOnly(6, 4);
+
+            }
+            else {
+                formattedNumber = digitsOnly;
+            }
+            return formattedNumber;
+
+        }
+
+
+        function updatePhoneNumber() {
+            var phoneNumberInput = document.getElementById("phone_number_input");
+            var formattedPhoneNumber = formatPhoneNumber(phoneNumberInput.value);
+            console.log("hi")
+            console.log(formattedPhoneNumber)
+
+            var phoneNumberOutput = document.getElementById('phone_number_output')
+            phoneNumberOutput.textContent = formattedPhoneNumber
+        }
+
+
+    </script>
+
+</head>
+
+<style>
+    input {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+</style>
+
+
+
+
+<body>
+    <div>
+
+        <input type="text" id="phone_number_input" placeholder="mobile number" oninput="updatePhoneNumber()">
+        <!-- <div><label for="phone">(123)456-7890</label> </div> -->
+        <p> Formatted phone number: <span id="phone_number_output "></span></p>
+    </div>
+
+
+
+</body>
+
+</html>

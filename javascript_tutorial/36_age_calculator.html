@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+
+<style>
+
+    body{
+        background: #e2e2e2
+    }
+</style>
+<body>
+    
+
+
+    <div class="container">
+
+<div class="row">
+
+<div class="col-md-6 offset-md-3">
+    
+
+    
+
+    <div class="card mt-5">
+
+        <div class="card-body">
+
+<h1 class="card title text-center">Age Calcualtor</h1>
+
+<p class="text-secondary"><small>please enter your date of birth**</small></p>
+
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="form-group">
+
+    <input type="text" placeholder="Date" class="form-control" id="date_field">
+</div>
+
+</div>
+
+<div class="col-md-4">
+    <div class="form-group">
+        <select name="" id="month_field" class="form-control">
+<option value="" selected disabled>Month</option>
+<option value="januray">Jan</option>
+<option value="february">Feb</option>
+<option value="march">March</option>
+<option value="april">April</option>
+<option value="may">May</option>
+<option value="june">June</option>
+<option value="july">July</option>
+<option value="august">August</option>
+<option value="september">September</option>
+<option value="october">October</option>
+<option value="november">November</option>
+<option value="december">December</option>
+
+        </select>
+
+</div></div>
+
+<div class="col-md-4">
+
+    <div class="form-group">
+
+        <input id="year_field" type="text" placeholder="Year" class="form-control"></div>
+
+</div>
+
+
+
+
+</div>
+
+<div class="container text-center mt-3">
+
+    <button onclick="CalculateAge()" class="btn btn-warning -sm">Calculate</button>
+</div>
+
+<div class="container text-secondary" id="age"></div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+</div>
+
+
+    </div>
+    
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+<script>
+
+    const CalculateAge=()=>
+    {
+        let dobdDate=document.getElementById("date_field").value
+        let dobMonth=document.getElementById("month_field").value
+        let dobYear=document.getElementById("year_field").value
+        
+        console.log(dobdDate)
+        console.log(dobMonth)
+        console.log(dobYear)
+
+        if(dobdDate>31){
+            alert("input valid date");
+            return false;
+        }
+
+let dob=new Date(`${dobdDate} ${dobMonth} ${dobYear}`)
+let now= new Date()
+
+let nowDate=now.getDate();
+let nowMonth=now.getMonth();
+let nowYear=now.getFullYear();
+
+let d=nowDate-dobdDate
+let m=nowMonth-dobMonth
+let y=nowYear-dobYear
+
+
+
+let difference=now-dob
+
+//console.log(difference)// dff will be in miliseconds
+
+let ageYear=Math.floor((difference)/(1000 * 60 * 60 * 24 * 365.2425))
+document.getElementById("age").innerHTML=(`Your age is ${ageYear} years`)
+//console.log(days)
+//alert(`your age is ${y}year, ${m}months, ${d} days`)
+//console.log(dob)
+console.log(`${difference.getFullYear()} and ${difference.getMonth()+1} and ${difference.getDate()}`)
+
+    };
+
+
+</script>
+
+</body>
+</html>

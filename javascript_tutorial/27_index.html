@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js navigation</title>
+</head>
+<body>
+
+    <div id="container">
+
+<h1 id="title">We are learining js</h1>
+<p id="content">
+
+<span>
+
+    js is langugae for frontend and banckend
+</span></p>
+<h2> this is extra heading</h2>
+
+
+    </div>
+<button onclick="btnClicked()">Click me</button>
+    <script>
+        btnClicked=()=>{
+let containerOb=document.getElementById("container")
+console.log(containerOb)
+
+let k=containerOb.firstElementChild.nodeName
+console.log(k)
+console.log("test1")
+
+let firstChild=containerOb.firstElementChild
+console.log(firstChild)
+console.log("test2")
+
+firstChild.innerHTML="HI, change value"
+firstChild.style.color="pink"
+
+let lastChild=containerOb.lastElementChild
+console.log(lastChild)
+console.log("test3")
+lastChild.style.color="white"
+lastChild.style.backgroundColor="red"
+//---childs
+let nodes=containerOb.childNodes
+for(let n of nodes)
+{
+    console.log(n.nodeName)
+}
+
+console.log("test4")
+
+ //---parent node
+
+ let parentNode=containerOb.parentNode
+    console.log(parentNode.nodeName)
+
+
+    //previous sibling and next sibling
+    let titleOb=document.getElementById("title")
+    console.log(titleOb)
+    let nextS=titleOb.nextElementSibling    
+    console.log(nextS.nodeName)
+
+    console.log(nextS.nextElementSibling.nodeName)
+    console.log(nextS.previousElementSibling.nodeName)
+
+        }
+
+       
+</script>
+    
+</body>
+</html>

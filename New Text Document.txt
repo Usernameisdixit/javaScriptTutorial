@@ -1,0 +1,30 @@
+1.To include the href and onclick to the HTML “<a>” tag, first, create a “div” container and insert the “<a>” tag in HTML. Then, add the “href” for inserting the URL of the website. After that, add an “onclick” event which is utilized for creating an event when the user clicks on the link. This article has explained the method for adding href and onclick in an HTML tag.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" onclick="console.log('Link was clicked'); return false">hi</a> // not possible
+
+    <!--below solution works-->>
+    <a href="#" onclick="create(event)">hello</a>
+
+
+
+    <script>
+
+const create=(e)=>
+{
+
+    alert("heyyyyyy")
+}
+
+
+    </script>
+</body>
+</html>

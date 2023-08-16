@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>object operations</h1>  
+
+  <script>
+
+ let ob=     { first_name:'mohan',
+      age:25,
+      address:'Delhi',
+      display:function(){
+console.log(this.address)
+      }
+     }
+
+//      console.log(ob)
+//      console.log(ob.address)
+//      console.log(ob["first_name"])
+//      console.log(ob.first_name)
+//      console.log(ob["age"])
+// ob.display();
+
+for(let i in ob)
+{
+    console.log(`${i} => ${ob[i]}`)
+}
+ob.display();
+ob.first_name="john"
+console.log(ob.first_name)
+console.log(ob)
+
+delete ob.first_name
+console.log(ob)
+
+  </script>
+</body>
+</html>

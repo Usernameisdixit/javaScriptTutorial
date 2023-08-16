@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object getters and setters</title>
+</head>
+
+<body>
+   <h1>Object getters and setters</h1>
+    
+    <script>
+
+let student1={
+
+    name:"Rahul Dixit",
+    college: "HBTI",
+    city:"kanpur",
+
+    get getName()
+    {
+        return this.name.toUpperCase()
+    },
+
+    get getCollege()
+    {
+        return this.college;
+    },
+
+   set setName(name)
+   {
+       console.log("setting value to object")
+    //    if(name=="")
+    //    {
+    //        alert("not going to set value")
+    //        return;
+    //    }
+       this.name=name
+   },
+
+   set setCollege(college)
+   {
+       console.log("setting college")
+       this.college=college
+   },
+
+    display:function()
+    {
+        return `${this.name} : ${this.college}  : ${this.city}`
+    }
+
+}
+
+console.log(student1.display())
+//console.log(student1.name)  it is also correct
+//student1.name="mahesh" it is also correct
+student1.setName="Ramesh Dixit"
+console.log(student1.display())
+
+console.log(student1.getName)
+
+function Person(id,phone,age)
+{
+this.personId=id
+this.personPhone=phone
+this.personAge=age
+
+this.display=function()
+{
+    return this.personId + ":" +this.personPhone+ ":" + this.personAge
+
+}
+}
+
+let p1=new Person(10,989345892,53)
+console.log(p1.display())
+
+let p2=new Person(20,9885757,45)
+console.log(p2.display())
+    </script>
+</body>
+</html>

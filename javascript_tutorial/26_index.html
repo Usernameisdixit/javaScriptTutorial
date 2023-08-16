@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+    <h1 id="title">Helloo World!</h1>
+    <p id="hint">This is sample paragraph</p>
+</div>
+    <button onclick="addNode()">Add Node</button>
+
+    <script>
+
+// const addNode=()=>
+// {
+//     console.log("hi")
+// }
+
+function addNode()
+{
+    console.log("adding node")
+    //creating node
+    let divElement=document.createElement("div");
+    //console.log(divElement)
+    //creating text node
+    let textElement=document.createTextNode("wow this is magic")
+
+    let textElement1=document.createTextNode("This is helpful!")
+
+    //adding text node to div
+    divElement.appendChild(textElement)
+    divElement.appendChild(textElement1)
+    console.log(divElement)
+    console.log("test1")
+
+    let mainElement=document.getElementById("main")
+console.log(mainElement)
+mainElement.appendChild(divElement)
+ let titleElement=document.getElementById("title")
+// mainElement.insertBefore(divElement,titleElement)
+titleElement.innerHTML="<h1>hi js</h1>"
+//mainElement.removeChild(titleElement)
+//divElement.removeChild(textElement)
+//create a new node
+console.log("test3")
+let newNode=document.createTextNode("its is a new node")
+//divElement.appendChild(newNode)
+//mainElement.appendChild(divElement)
+//textElement.replaceWith(newNode)
+//let old1=document.getElementById("")
+//mainElement.replaceChild(newNode,titleElement)
+console.log(divElement)
+}
+
+
+    </script>
+</body>
+</html>

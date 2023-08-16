@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>common array operations</h1>
+
+
+    <script>
+
+let names=["John","Peter","Ram"];
+
+console.log(names)
+
+ names.forEach(function(s1,s2){
+
+     console.log(s2,s1)
+ })
+console.log( names.pop());
+console.log(names)
+let ns=names.shift();
+console.log("value of ns:"+ns)
+console.log(names)
+let nus=names.unshift("shyam") // will return new length of the array
+console.log("value of nus:"+nus)
+console.log(names)
+
+let k=names.indexOf("Peter")
+console.log(k)
+
+
+let months = ["January", "February", "Monday", "Tuesday"];
+let days = months.splice(2, 1);
+
+console.log(days); // ["Monday"]
+console.log(months); // ["January", "February", "Tuesday"]
+
+
+let arr2=[4,5,8,9,2]
+console.log(arr2.splice(2,7))
+console.log(arr2)
+
+var arr1=[3,7,5]
+var sum=0;
+arr1.forEach(function(items,index){
+//console.log(index,items)
+sum=sum+items;
+//console.log(index,items)
+
+})
+
+console.log(sum);
+
+    </script>
+</body>
+</html>
